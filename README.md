@@ -8,3 +8,4 @@ Hi! I thought that why not share my small resources collection with others at th
 |--------------------|-----------------|-----------------------------|-----------------|----------------|-------------------|
 |Install a 
 package(s) by name|`pacman -S`  |`Idnf install`  |`apt install` | `zypper install` or `zypper in` | `emerge [-a]`|
+| Remove a Packages by name | `pacman -Rs` | `dnf remove` | `apt remove` | `zypper remove` or `zypper rm` | `emerge -a[a]vc`|
