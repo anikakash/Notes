@@ -10,7 +10,5 @@ Hi! I thought that why not share my small resources collection with others at th
 package(s) by name|`pacman -S`  |`Idnf install`  |`apt install` | `zypper install` or `zypper in` | `emerge [-a]`|
 | Remove a Packages by name | `pacman -Rs`    | `dnf remove`   | `apt remove` | `zypper remove` or `zypper rm`   | `emerge -a[a]vc`|
 | Search for package(s) 
- by searching the expression in name, description, short description. 
- What exact fields are being searched by default varies in each tool. 
-  Mostly options bring tools on par.|`pacman -Ss` |`dnf search` |`apt search`| `zypper search` or `zypper se [-s]` | `emerge -S`|
+ by searching the expression in name, description, short description.What exact fields are being searched by default varies in each tool. Mostly options bring tools on par.|`pacman -Ss` |`dnf search` |`apt search`| `zypper search` or `zypper se [-s]` | `emerge -S`|
 
