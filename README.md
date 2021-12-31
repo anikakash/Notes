@@ -16,4 +16,4 @@ package(s) by name|`pacman -S`  |`Idnf install`  |`apt install` | `zypper instal
 | Remove dependencies that are no longer needed, because e.g. the package which needed the dependencies was removed. | `pacman -Qdtq \| pacman -Rs -` |` dnf autoremove` |`apt autoremove	`|`zypper rm -u`  (just for removing a package) or `zypper packages --unneeded` (listing only and without recursion) |`emerge [-a] --depclean` |
 | Remove packages no longer included in any repositories. | `pacman -Qmq \| pacman -Rs -` |`dnf repoquery --extras`|`aptitude purge '~o'`|
 |Mark a package previously installed as a dependency as explicitly required.| `~pacman -D --asexplicit`| `dnf mark install` | `apt-mark manual` | `zypper install --force` (workaround which needs to reinstall the package)|`emerge --select`|
-| Install package(s) as dependency / without marking as explicitly required.| 
+| Install package(s) as dependency / without marking as explicitly required.| `pacman -S --asdeps`| 
