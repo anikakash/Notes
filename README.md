@@ -7,4 +7,5 @@ Hi! I thought that why not share my small resources collection with others at th
 |Descriptions        |Arch               |Red Hat/Fedora      |Debian/Ubuntu       |SLES/openSUSE       |Gentoo             |
 |--------------------|-----------------|-----------------------------|-----------------|----------------|-------------------|
 |Install a 
-package(s) by name|`pacman -S`  |'Idnf install'  |
+package(s) by name|`pacman -S`  |`Idnf install`  |`apt install` | `zypper install` or
+`zypper in`|`emerge [-a]`|
