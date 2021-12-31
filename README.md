@@ -12,4 +12,4 @@ package(s) by name|`pacman -S`  |`Idnf install`  |`apt install` | `zypper instal
 | Search for package(s) by searching the expression in name, description, short description.What exact fields are being searched by default varies in each tool. Mostly options bring tools on par.|`pacman -Ss` |`dnf search` |`apt search`| `zypper search` or `zypper se [-s]` | `emerge -S`|
 | Upgrade Packages - Install packages which have an older version already installed | `pacman -Syu`| `dnf upgrade`|`apt update` and then `apt upgrade`|`zypper update` or `zypper up`|`emerge -[a]uDN @world`|
 | Upgrade Packages - Another form of the update command, which can perform more complex updates -- like distribution upgrades. When the usual update command will omit package updates, which include changes in dependencies, this command can perform those updates. | `pacman -Syu` | `dnf distro-sync` | `apt update` and then `apt dist-upgrade` | `zypper dup` | `emerge -[a]uDN @world` | 
-| Clean up all local caches. Options might limit what is actually cleaned. | 
+| Clean up all local caches. Options might limit what is actually cleaned. | `pacman -Sc` or `pacman -Scc` | 
