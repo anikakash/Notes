@@ -17,4 +17,4 @@ package(s) by name|`pacman -S`  |`Idnf install`  |`apt install` | `zypper instal
 | Remove packages no longer included in any repositories. | `pacman -Qmq \| pacman -Rs -` |`dnf repoquery --extras`|`aptitude purge '~o'`|
 |Mark a package previously installed as a dependency as explicitly required.| `~pacman -D --asexplicit`| `dnf mark install` | `apt-mark manual` | `zypper install --force` (workaround which needs to reinstall the package)|`emerge --select`|
 | Install package(s) as dependency / without marking as explicitly required.| `pacman -S --asdeps`| `dnf install` and then `dnf mark remove` |`apt-mark auto`| |`emerge [-a] --oneshot` or `emerge [-a] -1`|
-|Only downloads the given package(s) without unpacking or installing them|`pacman -Sw`|`dnf download`|`apt install --download-only`(into the package cache) or`apt download`(bypass the package cache)|`zypper --download-only`|
+|Only downloads the given package(s) without unpacking or installing them|`pacman -Sw`|`dnf download`|`apt install --download-only`(into the package cache) or`apt download`(bypass the package cache)|`zypper --download-only`|`emerge [-a] --fetchonly`|
