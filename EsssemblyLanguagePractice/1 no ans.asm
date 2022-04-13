@@ -1,0 +1,128 @@
+.MODEL LARGE
+.STACK 100H
+.DATA
+A DB ?
+B DB ?
+C DB ?
+D DB ?
+E DB ?
+F DB ?
+.CODE
+
+  MAIN PROC 
+   MOV AX,@DATA
+   MOV DS,AX
+   
+    MOV AH,1
+    INT 21H
+    MOV A,AL
+    MOV AH,1
+    INT 21H
+    MOV B,AL
+    MOV AH,1
+    INT 21H
+    MOV C,AL 
+    MOV AH,1
+    INT 21H
+    MOV D,AL
+    MOV AH,1
+    INT 21H
+    MOV E,AL 
+    MOV AH,1
+    INT 21H
+    MOV F,AL 
+    
+    MOV AH,2
+    MOV DL,0DH
+    INT 21H
+    MOV DL,0AH
+    INT 21H 
+       
+ONE:    
+  CMP A,5BH
+  JGE TWO
+  CMP A,40H
+  JLE TWO
+  
+  JMP FIRST  
+  
+TWO:      
+  CMP B,5BH
+  JGE THREE
+  CMP B,40H
+  JLE THREE
+  
+  JMP SECOND
+  
+THREE: 
+  CMP C,5BH
+  JGE FOUR
+  CMP C,40H
+  JLE FOUR
+ 
+  JMP THIRD 
+  
+FOUR: 
+  CMP D,5BH
+  JGE FIVE
+  CMP D,40H
+  JLE FIVE
+  
+  JMP FOURTH
+  
+FIVE: 
+  CMP E,5BH
+  JGE SIX
+  CMP E,40H
+  JLE SIX
+ 
+  JMP FIFTH
+  
+SIX: 
+  CMP F,5BH
+  JGE EXIT
+  CMP F,40H
+  JLE EXIT
+  
+  JMP SIXTH
+
+   
+ FIRST:
+  
+  MOV AH,2
+  MOV DL,A
+  INT 21H
+  JMP TWO   
+ SECOND:
+  MOV AH,2
+  MOV DL,B
+  INT 21H 
+  JMP THREE
+ THIRD:
+  MOV AH,2
+  MOV DL,C
+  INT 21H 
+  JMP FOUR  
+  
+ FOURTH:
+  MOV AH,2
+  MOV DL,D
+  INT 21H 
+  JMP FIVE
+ FIFTH:
+  MOV AH,2
+  MOV DL,E
+  INT 21H 
+  JMP SIX 
+ SIXTH:
+  MOV AH,2
+  MOV DL,F
+  INT 21H 
+   
+  JMP EXIT
+   
+EXIT:
+  MOV AH,4CH
+  INT 21H
+  MAIN ENDP
+  ENDP MAIN
